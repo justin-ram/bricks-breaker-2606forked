@@ -72,7 +72,8 @@ void Game::ResetBall()
 	ball.y_position = paddle.y_position - 1;
 	ball.x_velocity = rand() % 2 ? 1 : -1;
 	ball.y_velocity = -1;
-	ball.moving = false;
+	//controls ball motion
+	ball.moving = true;
 }
 
 bool Game::Update()
@@ -126,7 +127,10 @@ void Game::CheckCollision()
 			ball.y_velocity *= -1;
 
 			// TODO #5 - If the ball hits the same brick 3 times (color == black), remove it from the vector
-
+			if (bricks[i].color == Black)
+			{
+				bricks.erase(bricks.begin() + i);
+			}
 		}
 	}
 	// TODO #6 - If no bricks remain, pause ball and display (render) victory text with R to reset
