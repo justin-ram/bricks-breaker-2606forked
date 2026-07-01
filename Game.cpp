@@ -72,8 +72,7 @@ void Game::ResetBall()
 	ball.y_position = paddle.y_position - 1;
 	ball.x_velocity = rand() % 2 ? 1 : -1;
 	ball.y_velocity = -1;
-	//controls ball motion
-	ball.moving = true;
+	ball.moving = false;
 }
 
 bool Game::Update()
@@ -112,7 +111,13 @@ void Game::Render() const
 	{
 		bricks[i].Draw();
 	}
+	
+	if(ball.moving == false && bricks.size() == 0)
+	{
+		char victory[50] = { "Victory you win. Press R to Reset" };
+		Console::WordWrap(Console::WindowWidth()/2, Console::WindowHeight() / 2, 30, victory);
 
+	}
 	Console::Lock(false);
 }
 
@@ -134,7 +139,10 @@ void Game::CheckCollision()
 		}
 	}
 	// TODO #6 - If no bricks remain, pause ball and display (render) victory text with R to reset
-
+	if (bricks.size() == 0)
+	{
+		ball.moving = false;
+	}
 
 	if (paddle.Contains(ball.x_position + ball.x_velocity, ball.y_velocity + ball.y_position))
 	{
@@ -142,4 +150,5 @@ void Game::CheckCollision()
 	}
 
 	// TODO #7 - If ball touches bottom of window, pause ball and display (render) defeat text with R to reset
+	
 }
