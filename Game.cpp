@@ -126,8 +126,7 @@ void Game::CheckCollision()
 		// TODO #5 - If the ball hits the same brick 3 times (color == black), remove it from the vector
 
 	}
-	// TODO #4 - Update collision to check all bricks
-	if (bricks[1].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
+	else if (bricks[1].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
 	{
 		bricks[1].color = ConsoleColor(bricks[1].color - 1);
 		ball.y_velocity *= -1;
@@ -135,8 +134,7 @@ void Game::CheckCollision()
 		// TODO #5 - If the ball hits the same brick 3 times (color == black), remove it from the vector
 
 	}
-	// TODO #4 - Update collision to check all bricks
-	if (bricks[2].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
+	else if (bricks[2].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
 	{
 		bricks[2].color = ConsoleColor(bricks[2].color - 1);
 		ball.y_velocity *= -1;
@@ -144,8 +142,7 @@ void Game::CheckCollision()
 		// TODO #5 - If the ball hits the same brick 3 times (color == black), remove it from the vector
 
 	}
-	// TODO #4 - Update collision to check all bricks
-	if (bricks[3].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
+	else if (bricks[3].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
 	{
 		bricks[3].color = ConsoleColor(bricks[3].color - 1);
 		ball.y_velocity *= -1;
@@ -153,8 +150,7 @@ void Game::CheckCollision()
 		// TODO #5 - If the ball hits the same brick 3 times (color == black), remove it from the vector
 
 	}
-	// TODO #4 - Update collision to check all bricks
-	if (bricks[4].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
+	else if (bricks[4].Contains(ball.x_position + ball.x_velocity, ball.y_position + ball.y_velocity))
 	{
 		bricks[4].color = ConsoleColor(bricks[4].color - 1);
 		ball.y_velocity *= -1;
