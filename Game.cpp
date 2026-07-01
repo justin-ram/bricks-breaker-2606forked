@@ -27,7 +27,7 @@ void Game::Reset()
 	brick1.x_position = 3;
 	brick1.y_position = 5;
 	brick1.doubleThick = true;
-	brick1.color = ConsoleColor::DarkGreen;
+	brick1.color = ConsoleColor::DarkCyan;
 	bricks.push_back(brick1);
 
 	Box brick2;
@@ -36,7 +36,7 @@ void Game::Reset()
 	brick2.x_position = 19;
 	brick2.y_position = 5;
 	brick2.doubleThick = true;
-	brick2.color = ConsoleColor::DarkGreen;
+	brick2.color = ConsoleColor::DarkCyan;
 	bricks.push_back(brick2);
 
 	Box brick3;
@@ -45,7 +45,7 @@ void Game::Reset()
 	brick3.x_position = 35;
 	brick3.y_position = 5;
 	brick3.doubleThick = true;
-	brick3.color = ConsoleColor::DarkGreen;
+	brick3.color = ConsoleColor::DarkCyan;
 	bricks.push_back(brick3);
 
 	Box brick4;
@@ -54,7 +54,7 @@ void Game::Reset()
 	brick4.x_position = 51;
 	brick4.y_position = 5;
 	brick4.doubleThick = true;
-	brick4.color = ConsoleColor::DarkGreen;
+	brick4.color = ConsoleColor::DarkCyan;
 	bricks.push_back(brick4);
 
 	Box brick5;
@@ -63,7 +63,7 @@ void Game::Reset()
 	brick5.x_position = 67;
 	brick5.y_position = 5;
 	brick5.doubleThick = true;
-	brick5.color = ConsoleColor::DarkGreen;
+	brick5.color = ConsoleColor::DarkCyan;
 	bricks.push_back(brick5);
 }
 
