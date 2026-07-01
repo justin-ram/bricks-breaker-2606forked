@@ -116,12 +116,12 @@ void Game::Render() const
 	if(ball.moving == false && bricks.size() == 0)
 	{
 		char victory[50] = { "Victory. Press R to Reset" };
-		Console::WordWrap(Console::WindowWidth()/2, Console::WindowHeight() / 2, 30, victory);
+		Console::WordWrap(Console::WindowWidth()/2 -12, Console::WindowHeight() / 2, 30, victory);
 	}
 	if (ball.moving == false && ball.y_position == Console::WindowHeight())
 	{
 		char victory[50] = { "Failure. Press R to Reset" };
-		Console::WordWrap(Console::WindowWidth() / 2, Console::WindowHeight() / 2, 30, victory);
+		Console::WordWrap(Console::WindowWidth() / 2 - 12, Console::WindowHeight() / 2, 30, victory);
 	}
 	Console::Lock(false);
 }
