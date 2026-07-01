@@ -18,12 +18,13 @@ void Game::Reset()
 	ball.visage = 'O';
 	ball.color = ConsoleColor::Cyan;
 	ResetBall();
+	bricks.erase(bricks.begin(), bricks.end());
 
 	// TODO #2 - Add this brick and 4 more bricks to the vector
 	Box brick1;
 	brick1.width = 10;
 	brick1.height = 2;
-	brick1.x_position = 0;
+	brick1.x_position = 3;
 	brick1.y_position = 5;
 	brick1.doubleThick = true;
 	brick1.color = ConsoleColor::DarkGreen;
@@ -32,7 +33,7 @@ void Game::Reset()
 	Box brick2;
 	brick2.width = 10;
 	brick2.height = 2;
-	brick2.x_position = 16;
+	brick2.x_position = 19;
 	brick2.y_position = 5;
 	brick2.doubleThick = true;
 	brick2.color = ConsoleColor::DarkGreen;
@@ -41,7 +42,7 @@ void Game::Reset()
 	Box brick3;
 	brick3.width = 10;
 	brick3.height = 2;
-	brick3.x_position = 32;
+	brick3.x_position = 35;
 	brick3.y_position = 5;
 	brick3.doubleThick = true;
 	brick3.color = ConsoleColor::DarkGreen;
@@ -50,7 +51,7 @@ void Game::Reset()
 	Box brick4;
 	brick4.width = 10;
 	brick4.height = 2;
-	brick4.x_position = 48;
+	brick4.x_position = 51;
 	brick4.y_position = 5;
 	brick4.doubleThick = true;
 	brick4.color = ConsoleColor::DarkGreen;
@@ -59,7 +60,7 @@ void Game::Reset()
 	Box brick5;
 	brick5.width = 10;
 	brick5.height = 2;
-	brick5.x_position = 64;
+	brick5.x_position = 67;
 	brick5.y_position = 5;
 	brick5.doubleThick = true;
 	brick5.color = ConsoleColor::DarkGreen;
@@ -114,7 +115,7 @@ void Game::Render() const
 	
 	if(ball.moving == false && bricks.size() == 0)
 	{
-		char victory[50] = { "Victory you win. Press R to Reset" };
+		char victory[50] = { "Victory. Press R to Reset" };
 		Console::WordWrap(Console::WindowWidth()/2, Console::WindowHeight() / 2, 30, victory);
 	}
 	if (ball.moving == false && ball.y_position == Console::WindowHeight())
